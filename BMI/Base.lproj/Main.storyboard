@@ -1,24 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="身長と体重を入力せよ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXd-cY-e63">
+                                <rect key="frame" x="109.66666666666669" y="159" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hmn-rG-pkp">
+                                <rect key="frame" x="72" y="280" width="255" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K2b-W3-e8n">
+                                <rect key="frame" x="72" y="414" width="255" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKm-Gw-fzu">
+                                <rect key="frame" x="170" y="558" width="52" height="26.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHz-Vw-7gX">
+                                <rect key="frame" x="63" y="684" width="264" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="計算"/>
+                                <connections>
+                                    <action selector="calculateBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WeK-4c-z78"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qXd-cY-e63" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="03W-Wa-VU8"/>
+                            <constraint firstItem="kKm-Gw-fzu" firstAttribute="top" secondItem="K2b-W3-e8n" secondAttribute="bottom" constant="100" id="7oM-id-rhb"/>
+                            <constraint firstItem="hmn-rG-pkp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A2A-xi-Fpm"/>
+                            <constraint firstItem="hmn-rG-pkp" firstAttribute="top" secondItem="qXd-cY-e63" secondAttribute="bottom" constant="100" id="H9k-fw-UcQ"/>
+                            <constraint firstItem="kKm-Gw-fzu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MPc-Gn-ILU"/>
+                            <constraint firstItem="qXd-cY-e63" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NNK-tY-CZd"/>
+                            <constraint firstItem="K2b-W3-e8n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f7m-a5-TjR"/>
+                            <constraint firstItem="K2b-W3-e8n" firstAttribute="top" secondItem="hmn-rG-pkp" secondAttribute="bottom" constant="100" id="iQT-xx-pVR"/>
+                            <constraint firstItem="oHz-Vw-7gX" firstAttribute="top" secondItem="kKm-Gw-fzu" secondAttribute="bottom" constant="100" id="kZd-RM-Udb"/>
+                            <constraint firstItem="oHz-Vw-7gX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tY5-IW-5uI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bmiLabel" destination="kKm-Gw-fzu" id="Hg8-q0-9S7"/>
+                        <outlet property="heightTextField" destination="hmn-rG-pkp" id="GIc-3T-wSu"/>
+                        <outlet property="weightTextField" destination="K2b-W3-e8n" id="JJH-51-I3H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="26.717557251908396" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
